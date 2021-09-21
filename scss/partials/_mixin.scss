@@ -1,0 +1,27 @@
+@mixin box($bgColor, $headingColor, $bgButton) {
+  width: 400px;
+  border: $border;
+  padding: $padding;
+  background: map-get($map: $colors, $key: $bgColor);
+
+  h2 {
+    text-align: $text-center;
+    color: map-get($map: $colors, $key: $headingColor);
+  }
+
+  p {
+    padding: $padding;
+    line-height: 25px;
+    text-align: center;
+  }
+
+  a {
+    width: 100px;
+    padding: $padding;
+    border-radius: 5px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    background-color: map-get($map: $colors, $key: $bgButton);
+    color: map-get($map: $colors, $key: white-color);
+  }
+}
